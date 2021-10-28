@@ -29,6 +29,7 @@ public class ObjectDisplayGrid  extends JFrame implements KeyListener,InputSubje
     private static final String CLASSID = ".ObjectDisplayGrid";
     private char lastKey = 0;
 
+
     private static ObjectDisplayGrid uniqueinstance = null;
     private static Rogue rogue = null;
 
