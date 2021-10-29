@@ -115,18 +115,18 @@ public class ObjectDisplayGrid  extends JFrame implements KeyListener,InputSubje
             if(dungeon.creatures.get( i ).getClass() == Player.class){
                 Player temp = (Player) dungeon.creatures.get( i );
                 if(lastKey == 0 && endGame == false){
-                        System.out.println(ifMoveable(temp.getPosX(), temp.getPosY()-1));
-                        if(key == 'k' && ifMoveable(temp.getPosX(), temp.getPosY()-1)) {
+                        System.out.println(ifMoveable(temp.getPosX(), temp.getPosY()-1,lastKey,key));
+                        if(key == 'k' && ifMoveable(temp.getPosX(), temp.getPosY()-1,lastKey,key)) {
                             temp.setPosY(temp.getPosY()-1);
 
                         }
-                        else if(key == 'j' && ifMoveable(temp.getPosX(), temp.getPosY()+1)) {
+                        else if(key == 'j' && ifMoveable(temp.getPosX(), temp.getPosY()+1,lastKey,key)) {
                             temp.setPosY(temp.getPosY()+1);
                         }
-                        else if(key == 'h' && ifMoveable(temp.getPosX()-1, temp.getPosY())) {
+                        else if(key == 'h' && ifMoveable(temp.getPosX()-1, temp.getPosY(),lastKey,key)) {
                             temp.setPosX(temp.getPosX()-1);
                         }
-                        else if(key == 'l' && ifMoveable(temp.getPosX()+1, temp.getPosY())) {
+                        else if(key == 'l' && ifMoveable(temp.getPosX()+1, temp.getPosY(),lastKey,key)) {
                             temp.setPosX(temp.getPosX()+1);
                         }
                         else
@@ -190,12 +190,13 @@ public class ObjectDisplayGrid  extends JFrame implements KeyListener,InputSubje
         else { System.out.println(CLASSID + ".ObjectDisplayGrid(...) requestFocusInWindow FAILED"); }
     }
 
-    private boolean ifMoveable(int x, int y){
+    private boolean ifMoveable(int x, int y , char last, char key){
         char ch = objectGrid[x][y+2].getChar();
-        if(ch == 'T' || ch == 'H' || ch == 'S') {
+        if(ch == 'T' || ch == 'H' || ch == 'S')
+        {
             int i=0;
             while (i<dungeon.creatures.size()) {
-                if(x == dungeon.creatures.get(i).getPosX() && y == dungeon.creatures.get(i).getPosY()) {
+                if((x == dungeon.creatures.get(i).getPosX()+1 && y == dungeon.creatures.get(i).getPosY()+1) & last == key) {
                     Monster monster = (Monster) dungeon.creatures.get(i);
                     fight(monster, i);
                 }

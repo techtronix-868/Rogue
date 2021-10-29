@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7caa3789-09f7-4784-a5dc-312b878bfe4e" name="Changes" comment="Done" />
+    <list default="true" id="7caa3789-09f7-4784-a5dc-312b878bfe4e" name="Changes" comment="Done">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/ObjectDisplayGrid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/ObjectDisplayGrid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Rogue.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,7 +46,7 @@
     <configuration name="Rogue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="game.Rogue" />
       <module name="Rogue" />
-      <option name="PROGRAM_PARAMETERS" value="dropPack.xml" />
+      <option name="PROGRAM_PARAMETERS" value="testDrawing.xml" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="game.*" />
@@ -90,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635389192509</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Done">
+      <created>1635389483187</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1635389483187</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

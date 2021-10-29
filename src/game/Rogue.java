@@ -18,6 +18,7 @@ import java.util.ArrayList;
 
 public class Rogue {
 
+
     private static ObjectDisplayGrid displayGrid = null;
     private static Rogue uniqueinstance = null;
     private static Dungeon dungeon;
